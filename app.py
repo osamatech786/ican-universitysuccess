@@ -642,7 +642,9 @@ elif st.session_state.step == 12:
         drawing_mode="freedraw",
         key="signature_canvas"
     )
-    st.session_state.signature = canvas_result.image_data
+    # Only update the session state if there is a change in the canvas
+    if canvas_result.image_data is not None:
+        st.session_state.signature = canvas_result.image_data
 
     # Navigation buttons
     next_clicked = st.button("Next")
