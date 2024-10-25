@@ -365,21 +365,22 @@ elif st.session_state.step == 6:
         """
         <div style="display: flex; justify-content: space-around; align-items: center;">
             <a href="https://play.google.com/store/apps/details?id=com.whatsapp" target="_blank">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp4UxcUIekEUHtGhSIbNBjnyiBHuGGRFQlDA&s" alt="Download for Android" style="width:100px;height:100px;margin:10px;">
+                <img src="https://raw.githubusercontent.com/osamatech786/ican-universitysuccess/refs/heads/main/resources/icons/android.png" alt="Download for Android" style="width:100px;height:100px;margin:10px;">
             </a>
             <a href="https://apps.apple.com/app/whatsapp-messenger/id310633997" target="_blank">
                 <img src="https://cdn3.iconfinder.com/data/icons/social-media-logos-i-filled-line/2048/5315_-_Apple-512.png" alt="Download for iOS" style="width:100px;height:100px;margin:10px;">
             </a>
             <a href="https://get.microsoft.com/installer/download/9NKSQGP7F2NH" target="_blank">
-                <img src="https://www.citypng.com/public/uploads/preview/png-windows-10-white-logo-icon-701751694967903zjzgjdtpgm.png" alt="Download for Windows" style="width:100px;height:100px;margin:10px;">
+                <img src="https://github.com/osamatech786/ican-universitysuccess/blob/main/resources/icons/windows.png?raw=true" alt="Download for Windows" style="width:100px;height:100px;margin:10px;">
             </a>
             <a href="https://web.whatsapp.com/desktop/mac_native/release/?configuration=Release" target="_blank">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvNWCWQsIZFdtSyLBjN99bId4u_edtjQxg0Q&s" alt="Download for Mac" style="width:100px;height:100px;margin:10px;">
+                <img src="https://github.com/osamatech786/ican-universitysuccess/blob/main/resources/icons/macbook.png?raw=true" alt="Download for Mac" style="width:100px;height:100px;margin:10px;">
             </a>
         </div>
         """, 
         unsafe_allow_html=True
     )
+
     # Input for address
     st.session_state.address = st.text_area(
         "Please enter your complete mailing address.", 
