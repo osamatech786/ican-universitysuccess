@@ -604,13 +604,13 @@ elif st.session_state.step == 11:
     )
 
     # Link to the privacy policy
-    # privacy_policy_doc_link = 'https://aspiresoftltd-my.sharepoint.com/:b:/g/personal/muhammadoa_aspiresoft_co_uk/EbObssIa581KhS3Hjhl7gsEBojEcidZgv2YPRj7D5odbeg?e=w4slD6'
-    # st.write(f"[Privacy Policy]({privacy_policy_doc_link})")  # Actual link to privacy policy
+    privacy_policy_doc_link = 'https://drive.google.com/file/d/1QnmwPyUv22LPOU3eKBT1ho55QW_5_olS/view'
+    st.write(f"[Privacy Policy]({privacy_policy_doc_link})")  # Actual link to privacy policy
 
     # Path to the PDF file in the resources folder
-    pdf_file_path = os.path.join('resources', 'Student Privacy Notice_30.07.2024_Rev.1_FF.pdf')
+    # pdf_file_path = os.path.join('resources', 'Student Privacy Notice_30.07.2024_Rev.1_FF.pdf')
     # Display the link for the PDF file to open in a new tab
-    st.markdown(f'<a href="file://{pdf_file_path}" target="_blank">Privacy Policy</a>', unsafe_allow_html=True)
+    # st.markdown(f'<a href="file://{pdf_file_path}" target="_blank">Privacy Policy</a>', unsafe_allow_html=True)
 
     # Navigation buttons
     next_clicked = st.button("Next", key=f"next_{st.session_state.step}")
