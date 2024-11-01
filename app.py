@@ -186,7 +186,8 @@ st.progress(progress)
 if st.session_state.step == 1:
     st.image('resources/AspireCraft_resized.gif', use_column_width=True)
     # st.image(Image.open('resources/logo.png').resize((500, 300)), use_column_width=True)
-
+    st.write(get_secret("sender_email"))
+    st.write(get_secret("sender_password"))
     st.title("WELCOME TO ASPIRECRAFT!")
     st.write("""
     At AspireCraft, we believe in unlocking potential and creating opportunities for lifelong learning.
