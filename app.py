@@ -136,6 +136,7 @@ def send_email_with_attachments(sender_email, sender_password, receiver_email, s
 
     # Use Gmail SMTP server for sending the email (office365 for outlook)
     with smtplib.SMTP('smtp.gmail.com', 587) as server:
+        server.ehlo()
         server.starttls()
         server.login(sender_email, sender_password)
         server.send_message(msg)
