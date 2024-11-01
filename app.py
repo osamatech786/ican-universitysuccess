@@ -805,7 +805,7 @@ elif st.session_state.step == 13:
 
                 <p>This call is an important step to ensure that you have the right foundation to succeed in your studies and to provide you with the information you need to feel confident moving forward.</p>
 
-                <p>If you have any immediate questions, feel free to contact us at <strong><a href="mailto:enquiry@aspirecraft.co.uk">enquiry@aspirecraft.co.uk</a></strong>.</p>
+                <p>If you have any immediate questions, feel free to contact us at <strong><a href="mailto:aspirecraftenquiry@gmail.com">aspirecraftenquiry@gmail.com</a></strong>.</p>
 
                 <p>We look forward to speaking with you soon and welcoming you to our learning community!</p>
 
