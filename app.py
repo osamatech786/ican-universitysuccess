@@ -210,8 +210,8 @@ elif st.session_state.step == 2:
     )
 
     # Next and Back buttons for navigation
-    next_clicked = st.button("Next")
-    back_clicked = st.button("Back")
+    next_clicked = st.button("Next", key=f"next_{st.session_state.step}")
+    back_clicked = st.button("Back", key=f"back_{st.session_state.step}")
 
     # Handle Next button click
     if next_clicked:
@@ -244,8 +244,8 @@ elif st.session_state.step == 3:
     )
     
     # Next and Back buttons for navigation
-    next_clicked = st.button("Next")
-    back_clicked = st.button("Back")
+    next_clicked = st.button("Next", key=f"next_{st.session_state.step}")
+    back_clicked = st.button("Back", key=f"back_{st.session_state.step}")
 
     # Handle Next button click
     if next_clicked:
@@ -278,8 +278,8 @@ elif st.session_state.step == 4:
     )
 
     # Next and Back buttons for navigation
-    next_clicked = st.button("Next")
-    back_clicked = st.button("Back")
+    next_clicked = st.button("Next", key=f"next_{st.session_state.step}")
+    back_clicked = st.button("Back", key=f"back_{st.session_state.step}")
 
     # Handle Next button click
     if next_clicked:
@@ -311,8 +311,8 @@ if st.session_state.step == 5:
     )
 
     # Next and Back buttons for navigation
-    next_clicked = st.button("Next")
-    back_clicked = st.button("Back")
+    next_clicked = st.button("Next", key=f"next_{st.session_state.step}")
+    back_clicked = st.button("Back", key=f"back_{st.session_state.step}")
 
     # Handle Next button click
     if next_clicked:
@@ -347,7 +347,7 @@ elif st.session_state.step == 6:
 
     # Display the country dialing code before the phone number input
     st.session_state.phone = st.text_input(
-        f"Please enter your WhatsApp number (international format starting with {selected_dialing_code}):", 
+        f"Please enter your WhatsApp number (international format starting with {selected_dialing_code} for {st.session_state.country}):", 
         value=st.session_state.phone
     )
 
@@ -388,8 +388,8 @@ elif st.session_state.step == 6:
     )
 
     # Next and Back buttons for navigation
-    next_clicked = st.button("Next")
-    back_clicked = st.button("Back")
+    next_clicked = st.button("Next", key=f"next_{st.session_state.step}")
+    back_clicked = st.button("Back", key=f"back_{st.session_state.step}")
 
     # Handle Next button click
     if next_clicked:
@@ -431,12 +431,13 @@ elif st.session_state.step == 7:
     )
 
     # Navigation buttons
-    next_clicked = st.button("Next")
-    back_clicked = st.button("Back")
+    next_clicked = st.button("Next", key=f"next_{st.session_state.step}")
+    back_clicked = st.button("Back", key=f"back_{st.session_state.step}")
 
     # Handle Next button click
     if next_clicked:
-        if st.session_state.previous_qualifications and st.session_state.current_institution:
+        if (st.session_state.previous_qualifications.strip() and 
+            st.session_state.current_institution.strip()):
             st.session_state.step = 8
             st.experimental_rerun()
         else:
@@ -485,8 +486,8 @@ if st.session_state.step == 8:
 
 
     # Navigation buttons
-    next_clicked = st.button("Next")
-    back_clicked = st.button("Back")
+    next_clicked = st.button("Next", key=f"next_{st.session_state.step}")
+    back_clicked = st.button("Back", key=f"back_{st.session_state.step}")
 
     # Handle Next button click
     if next_clicked:
@@ -531,8 +532,8 @@ elif st.session_state.step == 9:
     #      st.session_state.files(st.session_state.back_id_document)
     
     # Navigation buttons
-    next_clicked = st.button("Next")
-    back_clicked = st.button("Back")
+    next_clicked = st.button("Next", key=f"next_{st.session_state.step}")
+    back_clicked = st.button("Back", key=f"back_{st.session_state.step}")
 
     # Handle Next button click
     if next_clicked:
@@ -555,8 +556,8 @@ elif st.session_state.step == 10:
             st.session_state.files.append(st.session_state.address_proof)
 
     # Navigation buttons
-    next_clicked = st.button("Next")
-    back_clicked = st.button("Back")
+    next_clicked = st.button("Next", key=f"next_{st.session_state.step}")
+    back_clicked = st.button("Back", key=f"back_{st.session_state.step}")
 
     # Handle Next button click
     if next_clicked:
@@ -612,8 +613,8 @@ elif st.session_state.step == 11:
     st.markdown(f'<a href="file://{pdf_file_path}" target="_blank">Privacy Policy</a>', unsafe_allow_html=True)
 
     # Navigation buttons
-    next_clicked = st.button("Next")
-    back_clicked = st.button("Back")
+    next_clicked = st.button("Next", key=f"next_{st.session_state.step}")
+    back_clicked = st.button("Back", key=f"back_{st.session_state.step}")
 
     # Handle Next button click
     if next_clicked:
@@ -648,8 +649,8 @@ elif st.session_state.step == 12:
         st.session_state.signature = canvas_result.image_data
 
     # Navigation buttons
-    next_clicked = st.button("Next")
-    back_clicked = st.button("Back")
+    next_clicked = st.button("Next", key=f"next_{st.session_state.step}")
+    back_clicked = st.button("Back", key=f"back_{st.session_state.step}")
 
     # Handle Next button click
     if next_clicked:
@@ -822,32 +823,6 @@ elif st.session_state.step == 13:
             
             # Send thank you email to learner
             send_email_with_attachments(sender_email, sender_password, learner_email, subject_learner, body_learner)
-
-
-
-            # Reset the form for the next use
-            # st.session_state.step = 1
-            # st.session_state.personal_info = ""
-            # st.session_state.dob = None
-            # st.session_state.gender = ""
-            # st.session_state.country = ""
-            # st.session_state.email = ""
-            # st.session_state.phone = ""
-            # st.session_state.address = ""
-            # st.session_state.previous_qualifications = ""
-            # st.session_state.current_institution = ""
-            # st.session_state.courses = []  # Reset courses
-            # # st.session_state.start_date = None
-            # st.session_state.learning_mode = ""
-            # st.session_state.front_id_document = None
-            # st.session_state.back_id_document = None
-            # st.session_state.address_proof = None
-            # st.session_state.additional_document = None
-            # st.session_state.learning_preferences = ""
-            # st.session_state.special_requirements = ""
-            # st.session_state.emergency_contact = ""
-            # st.session_state.consent = False
-            # st.session_state.signature = None  # Clear the signature
 
             # Update session state to show the final thank you message
             st.session_state.submission_done = True
