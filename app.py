@@ -777,7 +777,7 @@ elif st.session_state.step == 13:
             # load_dotenv()                                     # uncomment import of this library!
             # sender_email = os.getenv('EMAIL')
             # sender_password = os.getenv('PASSWORD')
-            team_email = [sender_email]
+            team_email = ["enquiry.aspirecraft@gmail.com"]
 
             learner_email = [st.session_state.email]
             
@@ -805,7 +805,7 @@ elif st.session_state.step == 13:
 
                 <p>This call is an important step to ensure that you have the right foundation to succeed in your studies and to provide you with the information you need to feel confident moving forward.</p>
 
-                <p>If you have any immediate questions, feel free to contact us at <strong><a href="mailto:aspirecraftenquiry@gmail.com">aspirecraftenquiry@gmail.com</a></strong>.</p>
+                <p>If you have any immediate questions, feel free to contact us at <strong><a href="mailto:enquiry.aspirecraft@gmail.com">enquiry.aspirecraft@gmail.com</a></strong>.</p>
 
                 <p>We look forward to speaking with you soon and welcoming you to our learning community!</p>
 
